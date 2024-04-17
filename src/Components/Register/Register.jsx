@@ -4,16 +4,16 @@ import { registerRequest } from '../../../api/auth';
 
 function RegisterPage() {
     const { register, handleSubmit } = useForm();
-
+    const onSubmit = handleSubmit(async (values) => {
+        console.log(values);
+        const res = await registerRequest(values);
+        console.log(res);
+    })
     return (
         <div className="dark:bg-gradient-to-l from-gray-900 to-gray-600 flex justify-center items-center w-screen h-screen p-5">
             <div className="bg-white shadow-md dark:shadow-gray-600 rounded px-8 pt-6 pb-8 mb-4 flex flex-col w-full md:w-1/3 dark:bg-gray-800">
-                <h1 className="text-2xl font-semibold mb-4 text-center text-gray-900 dark:text-gray-200">Registro Administrador</h1>
-                <form onSubmit={handleSubmit( async (values) =>{ 
-                    console.log(values);
-                    const  res =  await registerRequest(values);
-                    console.log(res);
-                })}
+                <h1 className="text-2xl font-semibold mb-4 text-center text-gray-900 dark:text-gray-200">Regístrate</h1>
+                <form onSubmit={onSubmit}
                 >
                     <div className="mb-6">
                         <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2">

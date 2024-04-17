@@ -1,13 +1,15 @@
 'use client'
-import React from 'react';
 import Form from '../../../../Components/Form/Form';
+import SubNavBar from '../../../../Components/SubNavBar/SubNavBar';
 
-function Register() {
-  return (
-    <div>
-      <Form/>
-    </div>
-  )
+
+function LoginPage() {
+    return (
+        <div>
+            <SubNavBar />
+            <Form />
+        </div>
+    )
 }
 
-export default Register
+export default LoginPage;
