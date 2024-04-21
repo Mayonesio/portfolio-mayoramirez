@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type":"module",
+  
+
+  "homepage":"https://www.mayoramirez.com",
   "scripts": {
 
     "test": "echo \"Error: no test specified\" && exit 1"
