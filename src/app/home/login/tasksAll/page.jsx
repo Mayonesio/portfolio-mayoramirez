@@ -1,5 +1,5 @@
 'use client'
-import Form from '../../../../Components/Form/Form';
+import CardsZone from '../../../../Components/CardsZone/CardsZone';
 import SubNavBar from '../../../../Components/SubNavBar/SubNavBar';
 
 
@@ -7,7 +7,7 @@ function TaskPage() {
     return (
         <div>
             <SubNavBar />
-            <Form />
+            <CardsZone />
         </div>
     )
 }

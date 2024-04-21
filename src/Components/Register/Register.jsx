@@ -59,6 +59,8 @@ function RegisterPage() {
                         </button>
                     </div>
                 </form>
+                <p className=' text-gray-900 py-2'>Ya tengo una cuenta<a href='/home/login' className=' text-blue-900'>, ir a login</a></p>
+
             </div>
         </div>
     );

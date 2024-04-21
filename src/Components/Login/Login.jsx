@@ -1,12 +1,15 @@
-import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form';
+import {useAuth} from '../../context/AuthContext';
+
 
 
 const Login = () => {
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
+    const {signin, errors: signinErrors} = useAuth(); 
 
-    const onSubmit = handleSubmit(data => {
-        console.log(data)
+    const onSubmit = handleSubmit((data) => {
+        signin(data)
     })
 
     return (
@@ -14,13 +17,13 @@ const Login = () => {
             <div className="bg-white shadow-md dark:shadow-gray-600 rounded px-8 pt-6 pb-8 mb-4 flex flex-col w-full md:w-1/3 dark:bg-gray-800">
                 <h1 className="text-2xl font-semibold mb-4 text-center text-gray-900 dark:text-gray-200">Login</h1>
                 <form onSubmit={onSubmit}>
-                {/* {
-                        registerErrors.map((error, i) =>
+                    {
+                        signinErrors.map((error, i) =>
                             <div className='text-red-600' key={i} >
                                 {error}
                             </div>
                         )
-                    } */}
+                    }
                     <div className="mb-4">
                         <label className="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-2" htmlFor="email">
                             Email <span className="text-red-500">*</span>
@@ -38,10 +41,11 @@ const Login = () => {
                     </div>
                     <div className="flex items-center justify-between">
                         <button className="bg-green-500 hover:bg-green-700 text-white w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:bg-green-600" type="submit">
-                            Registrar
+                            Entrar
                         </button>
                     </div>
                 </form>
+                <p className=' text-gray-900 py-2'>Crea una <a href='/home/register' className=' text-blue-900'>nueva cuenta</a></p>
             </div>
         </div>
     );

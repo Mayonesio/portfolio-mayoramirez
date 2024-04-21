@@ -9,10 +9,15 @@ const SubNavBar = () => {
             }
         };
 
-        document.getElementById("hamburger").addEventListener("click", toggleMenu);
+        const hamburger = document.getElementById("hamburger");
+        if (hamburger) {
+            hamburger.addEventListener("click", toggleMenu);
+        }
 
         return () => {
-            document.getElementById("hamburger").removeEventListener("click", toggleMenu);
+            if (hamburger) {
+                hamburger.removeEventListener("click", toggleMenu);
+            }
         };
     }, []);
 
@@ -27,7 +32,8 @@ const SubNavBar = () => {
             </div>
             <div className="toggle hidden w-full md:w-auto md:flex text-right font-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
                 <a href="/home/login" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Login</a>
-                <a href="/home/login/tasks" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Tareas</a>
+                <a href="/home/login/tasks" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Nueva Tarea</a>
+                <a href="/home/login/tasksAll" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Tareas</a>
                 <a href="/home/register" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Registro</a>
                 
             </div>

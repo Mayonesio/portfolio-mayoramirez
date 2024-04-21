@@ -31,6 +31,7 @@ const Form = () => {
                             className="border-2 text-md mt-5 rounded-md py-2 px-4 bg-blue-600 hover:bg-blue-700 text-gray-100 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600">
                             Enviar
                         </button>
+                        
                     </form>
                 </div>
             </div>

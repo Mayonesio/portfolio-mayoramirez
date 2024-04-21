@@ -23,16 +23,15 @@ function AboutMe() {
 
                 <div className="mt-6">
                   <h2 className="text-3xl font-bold tracking-tight text-white">
-                    Natural Language Processing (NLP):
+                    CRUD completo en el backend
                   </h2>
                   <p className="mt-4 text-lg text-gray-300">
-                    The AI product utilizes advanced NLP algorithms to understand and interpret human language,
-                    enabling it to accurately process and analyze text-based inputs.
+                    Tengo un apartado especial para probar un CRUD completo, hecho sobre la misma página pero funcionando en Backend, entra y testea una herramienta de creacion, modificacion, borrado y consulta de tareas
                   </p>
                   <div className="mt-6">
                     <a className="inline-flex rounded-lg bg-pink-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-pink-600 hover:bg-pink-700 hover:ring-pink-700"
-                      href="/login">
-                      Learn More
+                      href="/home/login">
+                      Ir al CRUD
                     </a>
                   </div>
                 </div>
