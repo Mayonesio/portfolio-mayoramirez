@@ -33,6 +33,6 @@ export const loginScehma = z.object({
       required_error: "Contraseña necesaria",
     })
     .min(6, {
-      message: "La contraseña debe tener al menos 6 caracteres",
+      message: "Mínimo 6 caracteres",
     }),
 });
